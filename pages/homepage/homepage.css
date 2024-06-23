@@ -11,7 +11,7 @@ main {
 
 header,
 footer {
-  background-color: white;
+  background-color: #eee;
 }
 
 a {
@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  color: red;
+  color: #fe6f47;
 }
 
 header {
@@ -36,17 +36,21 @@ header {
 }
 
 .container-header {
-  height: 70px;
+  height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+}
+
+.home{
+  position: absolute;
+  left: 0;
 }
 
 .home a {
   display: flex;
   align-items: center;
-  justify-content: start;
-  width: 167.425px;
 }
 
 .home img {
@@ -59,23 +63,27 @@ header {
 }
 
 .logo img {
-  height: 70px;
+  height: 75px;
+}
+
+.act{
+  position: absolute;
+  right: 0;
+}
+
+.act-button{
+  border: 1px solid #ffb700;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
 }
 
 .sign-in {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 10px 15px;
-  background-color: white;
-  text-decoration: none;
+  background-color: #eee;
 }
 
 .sign-up {
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 10px 15px;
   background-color: #ffb700;
-  text-decoration: none;
   margin-left: 5px;
 }
 
@@ -84,12 +92,12 @@ header {
   opacity: 0.8;
 }
 
-.act button a {
+.act button {
   font-weight: bold;
 }
 
-.act button a:hover {
-  color: black;
+.footer-logo img{
+  width: 200px;
 }
 
 .footer-social-icon {
@@ -109,6 +117,20 @@ header {
     padding: 0 30px;
   }
 
+  .home{
+    display: none;
+  }
+
+  .logo{
+    position: absolute;
+    left: 30px;
+  }
+
+  .act{
+    position: absolute;
+    right: 30px;
+  }
+  
   /* main */
 
   .container-main {
@@ -234,7 +256,7 @@ header {
   /* footer */
 
   .container-footer {
-    margin: 40px 30px;
+    padding: 40px 30px;
   }
 
   .footer-col {
@@ -268,6 +290,15 @@ header {
   .container-header {
     width: 490px;
     margin: 0 auto;
+  }
+
+  .home{
+    display: none;
+  }
+
+  .logo{
+    position: absolute;
+    left: 0;
   }
 
   /* main */
@@ -404,7 +435,8 @@ header {
 
   .container-footer {
     width: 490px;
-    margin: 60px auto;
+    margin: 0 auto;
+    padding: 60px 0;
   }
 
   .footer-logo {
@@ -585,7 +617,8 @@ header {
 
   .container-footer {
     width: 690px;
-    margin: 60px auto;
+    margin: 0 auto;
+    padding: 60px 0;
   }
 
   .footer-logo {
@@ -773,7 +806,8 @@ header {
 
   .container-footer {
     width: 940px;
-    margin: 60px auto;
+    margin: 0 auto;
+    padding: 60px 0;
   }
 
   .footer-row {
@@ -809,7 +843,7 @@ header {
     margin-right: 20px;
   }
 }
-@media (min-width: 1250px) and (max-width: 1536px) {
+@media (min-width: 1250px) {
   /* header */
 
   .container-header {
@@ -955,7 +989,8 @@ header {
 
   .container-footer {
     width: 1250px;
-    margin: 60px auto;
+    margin: 0 auto;
+    padding: 60px 0;
   }
 
   .footer-row {
