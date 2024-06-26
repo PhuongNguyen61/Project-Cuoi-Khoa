@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #52bf9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    position: relative;
+    width: 670px;
+    box-shadow: 5px 5px 5px #59ab93;
+}
+
+.green{
+    background-color: #7ed386;
+    position: absolute;
+    left: 4.5%;
+    top: -5%;
+    width: 13%;
+    height: 110%;
+    box-shadow: 5px 0px 5px #cbd0cb;
+}
+
+.green div{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.green1{
+    color: #3fb6a8;
+}
+
+.green0{
+    color: white;
+}
+
+.white{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    padding-left: 20%;
+}
+
+.frame1{
+    width: 75%;
+}
+
+.title{
+    color: #7ed386;
+    padding-top: 50px;
+}
+
+.form{
+    padding: 40px 0;
+}
+
+.form0{
+    /* border: 1px solid red; */
+}
+
+.form2,
+.form3,
+.form4,
+.form5{
+    margin-top: 10px;
+}
+
+.form0-1{
+    font-size: 0.75rem;
+}
+
+.form0-2{
+    position: relative;
+    display: flex;
+    padding-top: 20px;
+}
+
+.form1-2-input,
+.form4-2-input,
+.form5-2-input{
+    width: 100%;
+}
+
+.form1-2-input,
+.form2-2,
+.form3-2,
+.form4-2-input,
+.form5-2-input{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #96d8c5;
+}
+
+input{
+    font-size: 1.2rem;
+    width: 100%;
+    border: white;
+    /* border-bottom: 2px solid #96d8c5; */
+}
+
+.form1-2-update,
+.form4-2-update,
+.form5-2-change{
+    font-size: 0.8rem;
+    border: 1px solid white;
+    background-color: #f0f0f0;
+    color: #32b7aa;
+    padding: 3px 5px 1px 5px;
+    position: absolute;
+    top: 21px;
+    right: 0px;
+}
+
+.frame2{
+    position: relative;
+    width: 25%;
+}
+
+.frame2-1{
+    color: #3dbb3d;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+.frame2-2{
+    height: 90px;
+    display: flex;
+    align-items: end;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 0px;
+    bottom: 95px;
+}
+
+.frame2-2 button{
+    background-color: #7ed386;
+    border: 1px solid #7ed386;
+    padding: 8px 9.52px;
+}
+
+.frame2-2 b{
+    font-size: 1.2rem;
+    color: white;
+}
+
+button:hover{
+    transform: rotate(90deg);
+    background-color: #3fb6a8;
+    border: 1px solid #3fb6a8;
+    padding: 13px 9.52px;
+}
