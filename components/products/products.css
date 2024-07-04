@@ -81,6 +81,11 @@ header {
     margin-left: 5px;
 }
 
+.sign-out {
+    background-color: #ffb700;
+    margin-left: 20px;
+}
+
 .act button:hover {
     cursor: pointer;
     opacity: 0.8;

@@ -224,15 +224,8 @@ for (let i = 0; i < productInfor.length; i++) {
 
 // Chuyển hướng đến trang chi tiết sản phẩm
 function getProduct(id) {
-    const currentSignIn = localStorage.getItem('currentSignIn')
-    if (!currentSignIn) {
-        alert("Vui lòng đăng nhập để xem chi tiết sản phẩm");
-        window.location.href = "../../../pages/sign-in/sign-in.html";
-    }
-    else {
-        localStorage.setItem("productNumber", `${id}`);
-        window.location.href = "../../components/products/products.html";
-    }
+    localStorage.setItem("productNumber", `${id}`);
+    window.location.href = "../../components/products/products.html";
 }
 
 
@@ -254,7 +247,15 @@ if (currentSignIn) {
             <img src="../../public/icon/user-svgrepo-com.svg" alt="" class="act-icon">
             <div>${currentSignIn.username}</div>
         </div>
+
+        <button class="act-button sign-out" id="sign-out">Đăng Xuất</button>
     `
+    // Đăng xuất
+    const signOut = document.getElementById('sign-out');
+    signOut.addEventListener('click', () => {
+      localStorage.removeItem('currentSignIn');
+      window.location.href = "../../../pages/homepage/homepage.html";
+    });
 } else {
     act.innerHTML = `
         <div class="cart">
@@ -263,11 +264,11 @@ if (currentSignIn) {
         </div>
 
         <a href="../sign-in/sign-in.html">
-            <button class="act-button sign-in">Sign In</button>
+            <button class="act-button sign-in">Đăng Nhập</button>
         </a>
         
         <a href="../sign-up/sign-up.html">
-            <button class="act-button sign-up">Sign Up</button>
+             <button class="act-button sign-up">Đăng Ký</button>
         </a>
     `
 }
@@ -286,7 +287,6 @@ function getTotal() {
 }
 // Thêm sản phẩm vào giỏ hàng
 const addToCart = document.getElementsByClassName('add-to-cart')
-getTotal()
 for (let i = 0; i < addToCart.length; i++) {
     addToCart[i].addEventListener('click', () => {
         const currentSignIn = localStorage.getItem('currentSignIn')
@@ -315,3 +315,4 @@ for (let i = 0; i < addToCart.length; i++) {
         getTotal()
     })
 }
+getTotal()
