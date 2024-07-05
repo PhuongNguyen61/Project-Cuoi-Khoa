@@ -14,7 +14,7 @@ if (currentSignIn) {
 
         <div class="account">
             <img src="../../../public/icon/user-svgrepo-com.svg" alt="" class="act-icon">
-            <div>${currentSignIn.username}</div>
+            <div class="username">${currentSignIn.username}</div>
         </div>
 
         <button class="act-button sign-out" id="sign-out">Đăng Xuất</button>
@@ -28,8 +28,10 @@ if (currentSignIn) {
 } else {
     act.innerHTML = `
         <div class="cart">
-            <img src="../../public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
-            <div class="total" id="total">0</div>
+            <a href="../cart/cart.html"">
+                <img src="../../../public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
+                <div class="total" id="total">0</div>
+            </a>
         </div>
 
         <a href="../../pages/sign-in/sign-in.html">
