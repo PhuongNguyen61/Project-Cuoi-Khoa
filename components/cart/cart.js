@@ -6,7 +6,7 @@ if (currentSignIn) {
     currentSignIn = JSON.parse(currentSignIn)
     act.innerHTML = `
         <div class="cart">
-            <a href="./components/cart/cart.html">
+            <a href="cart.html">
                 <img src="../../public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
                 <div class="total" id="total">0</div>
             </a>
@@ -24,12 +24,12 @@ if (currentSignIn) {
     signOut.addEventListener('click', () => {
         localStorage.removeItem('currentSignIn');
         localStorage.removeItem('product-choice');
-        window.location.href = "../../../pages/homepage/homepage.html";
+        window.location.href = "../../index.html";
     });
 } else {
     act.innerHTML = `
         <div class="cart">
-            <a href="./components/cart/cart.html">
+            <a href="cart.html">
                 <img src="../../public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
                 <div class="total" id="total">0</div>
             </a>

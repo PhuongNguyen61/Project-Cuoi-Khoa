@@ -20,5 +20,5 @@ signIn.addEventListener("submit", (e) => {
         username: findUser.username,
     }
     localStorage.setItem('currentSignIn', JSON.stringify(signInUser))
-    window.location.href = "../homepage/homepage.html"
+    window.location.href = "../../index.html"
 })

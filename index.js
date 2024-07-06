@@ -268,7 +268,7 @@ for (let i = 0; i < productInfor.length; i++) {
 // Chuyển hướng đến trang chi tiết sản phẩm
 function getProduct(id) {
   localStorage.setItem("productNumber", `${id}`);
-  window.location.href = "../../components/products/products.html";
+  window.location.href = "components/products/products.html";
 }
 
 // Chuyển đổi đăng nhập - đăng ký > giỏ hàng - user
@@ -279,14 +279,14 @@ if (currentSignIn) {
   currentSignIn = JSON.parse(currentSignIn);
   act.innerHTML = `
         <div class="cart">
-            <a href="../../components/cart/cart.html">
-                <img src="../../public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
+            <a href="components/cart/cart.html">
+                <img src="public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
                 <div class="total" id="total">0</div>
             </a>
         </div>
 
         <div class="account">
-            <img src="../../public/icon/user-svgrepo-com.svg" alt="" class="act-icon">
+            <img src="public/icon/user-svgrepo-com.svg" alt="" class="act-icon">
             <div class="username">${currentSignIn.username}</div>
         </div>
 
@@ -302,17 +302,17 @@ if (currentSignIn) {
 } else {
   act.innerHTML = `
         <div class="cart">
-            <a href="../../components/cart/cart.html">
-                <img src="../../public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
+            <a href="components/cart/cart.html">
+                <img src="public/icon/cart-shopping-svgrepo-com.svg" alt="" class="act-icon act-icon-cart">
                 <div class="total" id="total">0</div>
             </a>
         </div>
 
-        <a href="../../pages/sign-in/sign-in.html">
+        <a href="pages/sign-in/sign-in.html">
             <button class="act-button sign-in">Đăng Nhập</button>
         </a>
         
-        <a href="../../pages/sign-up/sign-up.html">
+        <a href="pages/sign-up/sign-up.html">
              <button class="act-button sign-up">Đăng Ký</button>
         </a>
     `;
