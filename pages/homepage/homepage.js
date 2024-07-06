@@ -253,8 +253,9 @@ if (currentSignIn) {
     // Đăng xuất
     const signOut = document.getElementById('sign-out');
     signOut.addEventListener('click', () => {
-      localStorage.removeItem('currentSignIn');
-      window.location.href = "../../../pages/homepage/homepage.html";
+        localStorage.removeItem('currentSignIn');
+        localStorage.removeItem('product-choice');
+        window.location.href = "../../../pages/homepage/homepage.html";
     });
 } else {
     act.innerHTML = `

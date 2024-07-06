@@ -22,8 +22,9 @@ if (currentSignIn) {
     // Đăng xuất
     const signOut = document.getElementById('sign-out');
     signOut.addEventListener('click', () => {
-      localStorage.removeItem('currentSignIn');
-      window.location.href = "../../../pages/homepage/homepage.html";
+        localStorage.removeItem('currentSignIn');
+        localStorage.removeItem('product-choice');
+        window.location.href = "../../../pages/homepage/homepage.html";
     });
 } else {
     act.innerHTML = `
@@ -60,8 +61,6 @@ getTotal();
 
 
 
-
-
 const totalPriceElement = document.getElementById("total-price");
 let totalPrice = 0;
 
@@ -78,23 +77,19 @@ for (let i = 0; i < data.length; i++) {
     parseFloat(data[i].priceProduct) * parseInt(data[i].count); //chuyển đổi dạng string sang só thực và số nguyên
   totalPrice += itemTotalPrice;
   product.innerHTML += `
-                     <div class="frame1-col">
-                        <div class="frame1-cate-item">
-                                <div class="frame1-cate-img">
-                                    <img src="../${data[i].imgProduct}" alt="" class="frame1-img">
-                                </div>
+        <div class="frame1-row">
+            <img src="../${data[i].imgProduct}" alt="" class="frame1-product-img">
 
-                                <div class="frame1-cate-item-info">
-                                    <h3 class="frame1-cate-item-title">${data[i].nameProduct}</h3>
-                                    <div class="frame1-product-card-row">
-                                        <p class="frame1-product-card-price">${data[i].priceProduct}đ x ${data[i].count}</p>                                                                                       
-                                    </div>
-                                    </div>
-                                    <div class = "incr-decr-btn">
-                                      <button class="increase-btn" data-id="${data[i].id}">+</button>
-                                      <button class="decrease-btn" data-id="${data[i].id}">-</button>
-                                    </div>                                               
-                    </div>`;
+            <div class="frame1-product-infor">
+                <h1 class="frame1-product-name">${data[i].nameProduct}</h1>
+                <p class="frame1-product-price">${data[i].priceProduct}đ x ${data[i].count}</p>                                                                                       
+                <div class = "incr-decr-btn">
+                    <button class="increase-btn" data-id="${data[i].id}">+</button>
+                    <button class="decrease-btn" data-id="${data[i].id}">-</button>
+                </div>
+            </div>                                           
+        </div>
+    `
 }
 
 
