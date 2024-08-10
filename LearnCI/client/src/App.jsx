@@ -88,31 +88,68 @@
 
 // ----------------------------------------------
 
-import { useState } from 'react';
-const App = () => {
-  // true: sáng, false: tối
-  const [theme, setTheme] = useState(true);
-  const handleSetTheme = () => {
-    setTheme(!theme);
-  };
-  // mặc định giá trị cho theme sáng
-  let styleTheme = {
-    backgroundColor: 'white',
-    color: 'black',
-  };
-  let currTheme = !theme ? 'Light' : 'Dark';
-  if (!theme) {
-    styleTheme = {
-      backgroundColor: 'black',
-      color: 'white',
-    };
-  }
+// import { useState } from 'react';
+// const App = () => {
+//   // true: sáng, false: tối
+//   const [theme, setTheme] = useState(true);
+//   const handleSetTheme = () => {
+//     setTheme(!theme);
+//   };
+//   // mặc định giá trị cho theme sáng
+//   let styleTheme = {
+//     backgroundColor: 'white',
+//     color: 'black',
+//   };
+//   let currTheme = !theme ? 'Light' : 'Dark';
+//   if (!theme) {
+//     styleTheme = {
+//       backgroundColor: 'black',
+//       color: 'white',
+//     };
+//   }
   
+//   return (
+//     <div style={styleTheme}>
+//       <p>Hello! I'm MindX. 10 years old.</p>
+//       <button onClick={handleSetTheme}>Change theme {currTheme}</button>
+//     </div>
+//   );
+// };
+// export default App;
+
+// ----------------------------------------------
+
+import { useState } from 'react';
+import './App.css';
+/**
+ *
+ * Thay vì tư tưởng lấy giá trị từ ô input
+ *
+ *
+ * -> Lấy dữ liệu để đưa cho thẻ input hiển thị
+ * Chính vì ô input lấy giá trị (dữ liệu) từ component, cho nên nó không có khả năng tự thay đổi giá trị
+ *
+ */
+function App() {
+  const [valueEmail, setValueEmail] = useState('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(valueEmail);
+  };
   return (
-    <div style={styleTheme}>
-      <p>Hello! I'm MindX. 10 years old.</p>
-      <button onClick={handleSetTheme}>Change theme {currTheme}</button>
-    </div>
+    <>
+      <form onSubmit={handleSubmit}>
+        <label>Email:</label>
+        <input
+          placeholder="Nhập email"
+          value={valueEmail}
+          onChange={(e) => {
+            setValueEmail(e.target.value);
+          }}
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </>
   );
-};
+}
 export default App;
